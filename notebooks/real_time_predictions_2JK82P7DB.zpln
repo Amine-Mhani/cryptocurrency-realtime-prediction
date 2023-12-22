@@ -1,0 +1,929 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nparquet_df = spark.read.parquet(\"/user/hive/warehouse/crypto_data1/part-*.parquet\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:14+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=292",
+              "$$hashKey": "object:7187"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=293",
+              "$$hashKey": "object:7188"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702832791599_1087930530",
+      "id": "paragraph_1702832791599_1087930530",
+      "dateCreated": "2023-12-17T17:06:31+0000",
+      "dateStarted": "2023-12-18T01:52:42+0000",
+      "dateFinished": "2023-12-18T01:52:46+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:6636"
+    },
+    {
+      "text": "%pyspark\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:20+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+--------+----------+----------+----------+--------------------+\n| Name|   Price|24H_CHANGE|24H_VOLUME|Market_Cap|            Datetime|\n+-----+--------+----------+----------+----------+--------------------+\n|  XMR| $168.49|    -0.37%|   $77.7 M|    $3.1 B|2023-12-18T00:01:...|\n|  ETC|  $20.07|    -3.21%|  $144.7 M|    $2.9 B|2023-12-18T00:01:...|\n|  FIL|   $5.43|    -5.48%| $485.95 M|   $2.61 B|2023-12-18T00:01:...|\n| HBAR|$0.07865|    -2.07%|  $59.69 M|   $2.64 B|2023-12-18T00:01:...|\n|  CRO|$0.09847|    -2.74%|   $8.99 M|    $2.6 B|2023-12-18T00:01:...|\n|  INJ|  $30.64|    +3.82%| $189.29 M|   $2.57 B|2023-12-18T00:01:...|\n|  IMX|   $1.99|    -5.68%| $129.83 M|   $2.56 B|2023-12-18T00:01:...|\n|  APT|   $8.11|    -1.83%| $148.75 M|   $2.47 B|2023-12-18T00:01:...|\n| TUSD| $0.9971|    -0.00%| $118.45 M|   $2.44 B|2023-12-18T00:01:...|\n|  KAS| $0.1083|    -8.13%|  $67.72 M|   $2.38 B|2023-12-18T00:01:...|\n| NEAR|   $2.29|    -4.02%| $170.64 M|    $2.3 B|2023-12-18T00:01:...|\n|  VET|$0.02965|    -1.71%|  $42.93 M|   $2.16 B|2023-12-18T00:01:...|\n|  TIA|  $13.00|    -1.64%| $319.32 M|   $1.97 B|2023-12-18T00:01:...|\n|   OP|   $2.09|    -5.07%| $196.95 M|    $1.9 B|2023-12-18T00:01:...|\n| RUNE|   $5.59|    -0.92%| $163.02 M|   $1.89 B|2023-12-18T00:01:...|\n|  LDO|   $2.10|    -3.19%|  $55.74 M|   $1.87 B|2023-12-18T00:01:...|\n|  MNT| $0.5726|    -1.67%|  $25.33 M|   $1.79 B|2023-12-18T00:01:...|\n|FDUSD| $0.9967|    -0.17%|   $2.12 B|   $1.65 B|2023-12-18T00:01:...|\n| EGLD|  $61.83|    +0.18%|  $94.98 M|   $1.63 B|2023-12-18T00:01:...|\n|$rndr|   $4.25|    -3.87%|  $96.12 M|   $1.58 B|2023-12-18T00:01:...|\n+-----+--------+----------+----------+----------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=294",
+              "$$hashKey": "object:7250"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833023006_1871303691",
+      "id": "paragraph_1702833023006_1871303691",
+      "dateCreated": "2023-12-17T17:10:23+0000",
+      "dateStarted": "2023-12-18T01:52:46+0000",
+      "dateFinished": "2023-12-18T01:52:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6637"
+    },
+    {
+      "text": "%pyspark\nparquet_df = parquet_df.drop(\"24H_VOLUME\")\nparquet_df = parquet_df.drop(\"24H_CHANGE\")\nparquet_df = parquet_df.drop(\"24H_CHANGE_CLEANED\")\nparquet_df = parquet_df.drop(\"Market_Cap\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:23+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833130951_940744675",
+      "id": "paragraph_1702833130951_940744675",
+      "dateCreated": "2023-12-17T17:12:10+0000",
+      "dateStarted": "2023-12-18T01:52:46+0000",
+      "dateFinished": "2023-12-18T01:52:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6638"
+    },
+    {
+      "text": "%pyspark\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:27+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+--------+--------------------+\n| Name|   Price|            Datetime|\n+-----+--------+--------------------+\n|  XMR| $168.49|2023-12-18T00:01:...|\n|  ETC|  $20.07|2023-12-18T00:01:...|\n|  FIL|   $5.43|2023-12-18T00:01:...|\n| HBAR|$0.07865|2023-12-18T00:01:...|\n|  CRO|$0.09847|2023-12-18T00:01:...|\n|  INJ|  $30.64|2023-12-18T00:01:...|\n|  IMX|   $1.99|2023-12-18T00:01:...|\n|  APT|   $8.11|2023-12-18T00:01:...|\n| TUSD| $0.9971|2023-12-18T00:01:...|\n|  KAS| $0.1083|2023-12-18T00:01:...|\n| NEAR|   $2.29|2023-12-18T00:01:...|\n|  VET|$0.02965|2023-12-18T00:01:...|\n|  TIA|  $13.00|2023-12-18T00:01:...|\n|   OP|   $2.09|2023-12-18T00:01:...|\n| RUNE|   $5.59|2023-12-18T00:01:...|\n|  LDO|   $2.10|2023-12-18T00:01:...|\n|  MNT| $0.5726|2023-12-18T00:01:...|\n|FDUSD| $0.9967|2023-12-18T00:01:...|\n| EGLD|  $61.83|2023-12-18T00:01:...|\n|$rndr|   $4.25|2023-12-18T00:01:...|\n+-----+--------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=295",
+              "$$hashKey": "object:7350"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833144207_653513332",
+      "id": "paragraph_1702833144207_653513332",
+      "dateCreated": "2023-12-17T17:12:24+0000",
+      "dateStarted": "2023-12-18T01:52:46+0000",
+      "dateFinished": "2023-12-18T01:52:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6639"
+    },
+    {
+      "text": "%pyspark\n# Filter the DataFrame for 'BTC' in the 'Name' column\nparquet_df = parquet_df.filter(col('Name') == 'BTC').orderBy(col('Datetime').desc()).limit(50)",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:32+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833666288_1194522944",
+      "id": "paragraph_1702833666288_1194522944",
+      "dateCreated": "2023-12-17T17:21:06+0000",
+      "dateStarted": "2023-12-18T01:52:47+0000",
+      "dateFinished": "2023-12-18T01:52:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6640"
+    },
+    {
+      "text": "%pyspark\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:35+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+----------+--------------------+\n|Name|     Price|            Datetime|\n+----+----------+--------------------+\n| BTC|$41,650.52|2023-12-18T00:20:...|\n| BTC|$41,670.93|2023-12-18T00:17:...|\n| BTC|$41,670.93|2023-12-18T00:15:...|\n| BTC|$41,670.93|2023-12-18T00:14:...|\n| BTC|$41,723.77|2023-12-18T00:10:...|\n| BTC|$41,703.33|2023-12-18T00:05:...|\n| BTC|$41,703.33|2023-12-18T00:03:...|\n| BTC|$41,703.33|2023-12-18T00:01:...|\n| BTC|$41,913.78|2023-12-17T13:40:...|\n| BTC|$41,914.02|2023-12-17T13:35:...|\n| BTC|$41,914.02|2023-12-17T13:34:...|\n| BTC|$41,914.02|2023-12-17T13:34:...|\n| BTC|$41,914.02|2023-12-17T13:34:...|\n| BTC|$41,914.02|2023-12-17T13:33:...|\n| BTC|$41,914.02|2023-12-17T13:33:...|\n| BTC|$41,914.02|2023-12-17T13:33:...|\n| BTC|$41,914.02|2023-12-17T13:32:...|\n| BTC|$41,914.02|2023-12-17T13:32:...|\n| BTC|$41,914.02|2023-12-17T13:32:...|\n| BTC|$41,919.62|2023-12-17T13:30:...|\n+----+----------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=296",
+              "$$hashKey": "object:7450"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833739136_442606467",
+      "id": "paragraph_1702833739136_442606467",
+      "dateCreated": "2023-12-17T17:22:19+0000",
+      "dateStarted": "2023-12-18T01:52:47+0000",
+      "dateFinished": "2023-12-18T01:52:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6641"
+    },
+    {
+      "text": "%pyspark\n# Data Cleaning\n# Convert Price to numeric\n# Replace \"$\" and \",\" in the Price column, then cast to float\nparquet_df = parquet_df.withColumn(\"Price\", regexp_replace(col(\"Price\"), \"[\\$,]\", \"\").cast(\"float\"))\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+--------+--------------------+\n|Name|   Price|            Datetime|\n+----+--------+--------------------+\n| BTC|41650.52|2023-12-18T00:20:...|\n| BTC|41670.93|2023-12-18T00:17:...|\n| BTC|41670.93|2023-12-18T00:15:...|\n| BTC|41670.93|2023-12-18T00:14:...|\n| BTC|41723.77|2023-12-18T00:10:...|\n| BTC|41703.33|2023-12-18T00:05:...|\n| BTC|41703.33|2023-12-18T00:03:...|\n| BTC|41703.33|2023-12-18T00:01:...|\n| BTC|41913.78|2023-12-17T13:40:...|\n| BTC|41914.02|2023-12-17T13:35:...|\n| BTC|41914.02|2023-12-17T13:34:...|\n| BTC|41914.02|2023-12-17T13:34:...|\n| BTC|41914.02|2023-12-17T13:34:...|\n| BTC|41914.02|2023-12-17T13:33:...|\n| BTC|41914.02|2023-12-17T13:33:...|\n| BTC|41914.02|2023-12-17T13:33:...|\n| BTC|41914.02|2023-12-17T13:32:...|\n| BTC|41914.02|2023-12-17T13:32:...|\n| BTC|41914.02|2023-12-17T13:32:...|\n| BTC|41919.62|2023-12-17T13:30:...|\n+----+--------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=297",
+              "$$hashKey": "object:7508"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833226467_1330870444",
+      "id": "paragraph_1702833226467_1330870444",
+      "dateCreated": "2023-12-17T17:13:46+0000",
+      "dateStarted": "2023-12-18T01:52:52+0000",
+      "dateFinished": "2023-12-18T01:52:59+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6642"
+    },
+    {
+      "text": "%pyspark\n# Convert Datetime column to timestamp type\nparquet_df = parquet_df.withColumn(\"Datetime\", to_timestamp(\"Datetime\"))\n\n# Extract year, month, day, and hour\nparquet_df = parquet_df.withColumn(\"Year\", year(\"Datetime\"))\nparquet_df = parquet_df.withColumn(\"Month\", month(\"Datetime\"))\nparquet_df = parquet_df.withColumn(\"Day\", dayofmonth(\"Datetime\"))\nparquet_df = parquet_df.withColumn(\"Hour\", hour(\"Datetime\"))",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:47:56+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833348738_1587913148",
+      "id": "paragraph_1702833348738_1587913148",
+      "dateCreated": "2023-12-17T17:15:48+0000",
+      "dateStarted": "2023-12-18T01:53:00+0000",
+      "dateFinished": "2023-12-18T01:53:00+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6643"
+    },
+    {
+      "text": "%pyspark\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:48:04+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+--------+--------------------+----+-----+---+----+\n|Name|   Price|            Datetime|Year|Month|Day|Hour|\n+----+--------+--------------------+----+-----+---+----+\n| BTC|41650.52|2023-12-18 00:20:...|2023|   12| 18|   0|\n| BTC|41670.93|2023-12-18 00:17:...|2023|   12| 18|   0|\n| BTC|41670.93|2023-12-18 00:15:...|2023|   12| 18|   0|\n| BTC|41670.93|2023-12-18 00:14:...|2023|   12| 18|   0|\n| BTC|41723.77|2023-12-18 00:10:...|2023|   12| 18|   0|\n| BTC|41703.33|2023-12-18 00:05:...|2023|   12| 18|   0|\n| BTC|41703.33|2023-12-18 00:03:...|2023|   12| 18|   0|\n| BTC|41703.33|2023-12-18 00:01:...|2023|   12| 18|   0|\n| BTC|41913.78|2023-12-17 13:40:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:35:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:34:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:34:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:34:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:33:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:33:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:33:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:32:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:32:...|2023|   12| 17|  13|\n| BTC|41914.02|2023-12-17 13:32:...|2023|   12| 17|  13|\n| BTC|41919.62|2023-12-17 13:30:...|2023|   12| 17|  13|\n+----+--------+--------------------+----+-----+---+----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=298",
+              "$$hashKey": "object:7608"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833360447_1019782579",
+      "id": "paragraph_1702833360447_1019782579",
+      "dateCreated": "2023-12-17T17:16:00+0000",
+      "dateStarted": "2023-12-18T01:53:00+0000",
+      "dateFinished": "2023-12-18T01:53:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6644"
+    },
+    {
+      "text": "%pyspark\nparquet_df = parquet_df.drop(\"Datetime\")\nparquet_df = parquet_df.drop(\"Name\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:48:11+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833388295_884330813",
+      "id": "paragraph_1702833388295_884330813",
+      "dateCreated": "2023-12-17T17:16:28+0000",
+      "dateStarted": "2023-12-18T01:53:12+0000",
+      "dateFinished": "2023-12-18T01:53:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6645"
+    },
+    {
+      "text": "%pyspark\nparquet_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:48:15+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------+----+-----+---+----+\n|   Price|Year|Month|Day|Hour|\n+--------+----+-----+---+----+\n|41650.52|2023|   12| 18|   0|\n|41670.93|2023|   12| 18|   0|\n|41670.93|2023|   12| 18|   0|\n|41670.93|2023|   12| 18|   0|\n|41723.77|2023|   12| 18|   0|\n|41703.33|2023|   12| 18|   0|\n|41703.33|2023|   12| 18|   0|\n|41703.33|2023|   12| 18|   0|\n|41913.78|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41914.02|2023|   12| 17|  13|\n|41919.62|2023|   12| 17|  13|\n+--------+----+-----+---+----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=299",
+              "$$hashKey": "object:7708"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833470870_2038644575",
+      "id": "paragraph_1702833470870_2038644575",
+      "dateCreated": "2023-12-17T17:17:50+0000",
+      "dateStarted": "2023-12-18T01:53:12+0000",
+      "dateFinished": "2023-12-18T01:53:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6646"
+    },
+    {
+      "text": "%pyspark\n# Assemble features into a vector\nfeature_columns = ['Year', 'Month', 'Day', 'Hour']\nassembler = VectorAssembler(inputCols=feature_columns, outputCol='features')\nassembled_data = assembler.transform(parquet_df)",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:49:35+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702834019577_1161059078",
+      "id": "paragraph_1702834019577_1161059078",
+      "dateCreated": "2023-12-17T17:26:59+0000",
+      "dateStarted": "2023-12-18T01:53:16+0000",
+      "dateFinished": "2023-12-18T01:53:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6647"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.ml import PipelineModel",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:49:39+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833005621_640525969",
+      "id": "paragraph_1702833005621_640525969",
+      "dateCreated": "2023-12-17T17:10:05+0000",
+      "dateStarted": "2023-12-18T01:53:16+0000",
+      "dateFinished": "2023-12-18T01:53:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6648"
+    },
+    {
+      "text": "%pyspark\nloaded_model = PipelineModel.load(\"/user/root/Linear Regression_20231218003635\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:52:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=300",
+              "$$hashKey": "object:7840"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=301",
+              "$$hashKey": "object:7841"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=302",
+              "$$hashKey": "object:7842"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=303",
+              "$$hashKey": "object:7843"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=304",
+              "$$hashKey": "object:7844"
+            },
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=305",
+              "$$hashKey": "object:7845"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833899220_541870558",
+      "id": "paragraph_1702833899220_541870558",
+      "dateCreated": "2023-12-17T17:24:59+0000",
+      "dateStarted": "2023-12-18T01:53:16+0000",
+      "dateFinished": "2023-12-18T01:53:24+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6649"
+    },
+    {
+      "text": "%pyspark\nloaded_model.transform(assembled_data).show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:52:16+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------+----+-----+---+----+--------------------+------------------+\n|   Price|Year|Month|Day|Hour|            features|        prediction|\n+--------+----+-----+---+----+--------------------+------------------+\n|41650.52|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41670.93|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41670.93|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41670.93|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41723.77|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41703.33|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41703.33|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41703.33|2023|   12| 18|   0|[2023.0,12.0,18.0...| 41683.88906250218|\n|41913.78|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41914.02|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n|41919.62|2023|   12| 17|  13|[2023.0,12.0,17.0...|41918.809042010536|\n+--------+----+-----+---+----+--------------------+------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=306",
+              "$$hashKey": "object:7923"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702833919015_1716721535",
+      "id": "paragraph_1702833919015_1716721535",
+      "dateCreated": "2023-12-17T17:25:19+0000",
+      "dateStarted": "2023-12-18T01:53:25+0000",
+      "dateFinished": "2023-12-18T01:53:28+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6650"
+    },
+    {
+      "text": "%pyspark\npredictions = loaded_model.transform(assembled_data)\nevaluator = RegressionEvaluator(labelCol=\"Price\", predictionCol=\"prediction\", metricName=\"rmse\")\n\nrmse = evaluator.evaluate(predictions)\nprint(\"RMSE:\", rmse)",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:52:27+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "RMSE: 18.52820190787341\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://b82b6ab37850:4040/jobs/job?id=307",
+              "$$hashKey": "object:7981"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702834141468_2126403541",
+      "id": "paragraph_1702834141468_2126403541",
+      "dateCreated": "2023-12-17T17:29:01+0000",
+      "dateStarted": "2023-12-18T01:53:28+0000",
+      "dateFinished": "2023-12-18T01:53:49+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6651"
+    },
+    {
+      "text": "%pyspark\nimport json\nimport os\nfrom datetime import datetime",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:52:40+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702836572794_841814118",
+      "id": "paragraph_1702836572794_841814118",
+      "dateCreated": "2023-12-17T18:09:32+0000",
+      "dateStarted": "2023-12-18T01:53:50+0000",
+      "dateFinished": "2023-12-18T01:53:50+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6652"
+    },
+    {
+      "text": "%pyspark\n# Example model_info\nmodel_info = {\n    \"rmse\": rmse,\n    \"testing_date\": str(datetime.now())\n}\n\n# Generate a unique filename based on the current timestamp\ntimestamp = datetime.now().strftime(\"%Y%m%d%H%M%S\")\nfile_name = f\"test_model_info_{timestamp}.json\"  # Unique file name\n\n# Specify the path where Hive table is located\nhive_table_path = \"/user/hive/warehouse/models_testing_infos_table\"\n\n# Path to save the JSON file temporarily (in the local filesystem)\nlocal_file_path = f\"/tmp/{file_name}\"  # Change to your preferred temporary directory\n\n# Save model information as JSON in the local filesystem\nwith open(local_file_path, \"w\") as json_file:\n    json.dump(model_info, json_file)\n\n# Move the generated file to the Hive table directory\nos.system(f\"hdfs dfs -put {local_file_path} {hive_table_path}/{file_name}\")\n\n# Remove the temporary local file after moving to HDFS\nos.remove(local_file_path)",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-18T00:53:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702834450265_420609177",
+      "id": "paragraph_1702834450265_420609177",
+      "dateCreated": "2023-12-17T17:34:10+0000",
+      "dateStarted": "2023-12-18T01:53:50+0000",
+      "dateFinished": "2023-12-18T01:54:06+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6653"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-17T18:09:42+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702836582719_1316699700",
+      "id": "paragraph_1702836582719_1316699700",
+      "dateCreated": "2023-12-17T18:09:42+0000",
+      "dateStarted": "2023-12-18T01:54:06+0000",
+      "dateFinished": "2023-12-18T01:54:06+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:6654"
+    }
+  ],
+  "name": "real_time_predictions",
+  "id": "2JK82P7DB",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "inIsolatedMode": false,
+    "startTime": "2023-12-18_01-52-42"
+  },
+  "path": "/real_time_predictions"
+}

@@ -1,0 +1,93 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%python\r\nfrom bs4 import BeautifulSoup\r\nimport requests\r\nfrom kafka import KafkaProducer\r\nimport json\r\nfrom datetime import datetime, timedelta\r\n\r\ndef get_table_heading(table):\r\n    '''Extracting Table Heading From Webpage'''\r\n\r\n    heading = list()\r\n    thead = table.find('thead').find('tr').find_all('th')[1:7]\r\n    for th in thead:\r\n        heading.append(th.text)\r\n\r\n    return heading\r\n\r\n\r\ndef extract_crypto_data(table):\r\n    '''Extracting Crypto Data From Table'''\r\n\r\n    crypto_list = list()\r\n    tbody = table.find('tbody').find_all('tr')\r\n    for tr in tbody:\r\n        tds = tr.find_all('td')[1:7]\r\n\r\n        crypto_list.append((\r\n            tds[0].text,\r\n            tds[1].find('span').text,\r\n            tds[2].find('div').text,\r\n            tds[3].text,\r\n            tds[4].text,\r\n            tds[5].text,))\r\n\r\n    return crypto_list\r\n\r\n\r\n\r\nurl = 'https://crypto.com/price'\r\nresponse = requests.get(url)\r\nsoup = BeautifulSoup(response.text, 'html.parser')\r\ntable = soup.find('table')\r\n\r\nheading = get_table_heading(table)\r\ncrypto_data = extract_crypto_data(table)\r\n\r\n# Kafka configuration\r\nbootstrap_servers = 'kafka-broker:29092'  # Replace with your Kafka broker's address\r\n\r\n# Create Kafka producer\r\nproducer = KafkaProducer(bootstrap_servers=bootstrap_servers,\r\n                         value_serializer=lambda v: json.dumps(v).encode('utf-8'))\r\n\r\ntopic = 'source_topic-001'  # Replace with your Kafka topic name\r\n\r\n# Produce data to Kafka topic with adjusted datetime and modified keys\r\nfor data_row in crypto_data:\r\n    data_dict = dict(zip(heading, data_row))\r\n    data_dict.pop('#', None)  # Remove '#' field if present\r\n    adjusted_datetime = datetime.now() + timedelta(hours=1)  # Subtract an hour from current datetime\r\n    data_dict['Datetime'] = adjusted_datetime.isoformat()  # Add adjusted datetime\r\n    \r\n    # Modify keys with spaces to use underscores\r\n    modified_data_dict = {key.replace(' ', '_'): value for key, value in data_dict.items()}\r\n    \r\n    producer.send(topic, value=modified_data_dict)\r\nprint(modified_data_dict)\r\n# Close the producer\r\nproducer.close()",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-17T22:43:28+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "{'Name': 'AAVE', 'Price': '$100.37', '24H_CHANGE': '-4.05%', '24H_VOLUME': '$139.2 M', 'Market_Cap': '$1.47 B', 'Datetime': '2023-12-18T02:00:07.270198'}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702728896466_215911537",
+      "id": "paragraph_1702728896466_215911537",
+      "dateCreated": "2023-12-16T12:14:56+0000",
+      "dateStarted": "2023-12-18T01:00:06+0000",
+      "dateFinished": "2023-12-18T01:00:07+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:1386"
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2023-12-16T15:17:58+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1702211033768_1299475362",
+      "id": "paragraph_1702211033768_1299475362",
+      "dateCreated": "2023-12-10T12:23:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:1387"
+    }
+  ],
+  "name": "kafka_stream",
+  "id": "2JKKZ7ZNT",
+  "defaultInterpreterGroup": "python",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "inIsolatedMode": false,
+    "startTime": "2023-12-18_01-00-06"
+  },
+  "path": "/kafka_stream"
+}
