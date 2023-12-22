@@ -31,6 +31,7 @@ Before getting started, ensure your environment meets the following requirements
 - RAM: Minimum of 13 GB.
 - Docker: Installed and verified.
 - Docker Compose: Installed and verified.
+- Link to Streamlit application : [Visual Stream app](https://mega.nz/file/sJclQYyB#AsxgK4J_XaSMIoNenaVh6JSfHH1BYdsZUAN9cQyL1jw)
 
 ## Environment Setup
 
@@ -62,7 +63,7 @@ The cryptocurrency real-time prediction system employs a distributed and scalabl
 
 The distributed nature of the architecture ensures scalability and resilience, making it suitable for handling large volumes of real-time cryptocurrency data. The integration of Apache Kafka, Spark Streaming, Hive, Apache Airflow, and Streamlit forms a comprehensive ecosystem for building a robust and efficient cryptocurrency prediction system.
 
-[Insert Architecture Diagram Here]
+![Alt Text](URL)
 
 ## Data Processing
 
