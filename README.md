@@ -63,7 +63,7 @@ The cryptocurrency real-time prediction system employs a distributed and scalabl
 
 The distributed nature of the architecture ensures scalability and resilience, making it suitable for handling large volumes of real-time cryptocurrency data. The integration of Apache Kafka, Spark Streaming, Hive, Apache Airflow, and Streamlit forms a comprehensive ecosystem for building a robust and efficient cryptocurrency prediction system.
 
-![Alt Text](URL)
+![Alt Text](architecture.jpg)
 
 ## Data Processing
 
